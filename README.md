@@ -30,7 +30,7 @@ And analyze:
 ---
 
 ##  Project Structure
-
+``` bash
 project/
 │
 ├── models/
@@ -57,7 +57,7 @@ project/
 ├── Multimodal_Emotion_Recognition_Report.pdf
 ├── README.md
 └── requirements.txt
-
+```
 
 
 ---
