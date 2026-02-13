@@ -1,12 +1,12 @@
-# 🎭 Multimodal Emotion Recognition
+#  Multimodal Emotion Recognition
 
-## 📌 Overview
+##  Overview
 
 This project implements a **Multimodal Emotion Recognition System** using:
 
-- 🎤 Speech-only input  
-- 📝 Text-only input  
-- 🔀 Fusion of Speech + Text
+-  Speech-only input  
+-  Text-only input  
+-  Fusion of Speech + Text
 
 The system is built using Deep Learning models to analyze emotional patterns from audio signals and textual content.
 
@@ -14,7 +14,7 @@ Dataset used: **Toronto Emotional Speech Set (**TESS**)** Available on Kaggle.
 
 ---
 
-## 🎯 Objective
+##  Objective
 
 To build and compare three models:
 
@@ -31,13 +31,40 @@ And analyze:
 
 ## 🗂️ Project Structure
 
-project/ │ ├── models/ │ ├── speech_pipeline/ │ │ ├── train.py │ │ └── test.py │ │ │ ├── text_pipeline/ │ │ ├── train.py │ │ └── test.py │ │ │ └── fusion_pipeline/ │ ├── train.py │ └── test.py │ ├── Results/ │ ├── accuracy_tables.csv │ └── plots/ │ ├── accuracy_comparison.png │ ├── tsne_speech.png │ ├── tsne_text.png │ └── tsne_fusion.png │ ├── Multimodal_Emotion_Recognition_Report.pdf ├── **README**.md └── requirements.txt
+project/
+│
+├── models/
+│ ├── speech_pipeline/
+│ │ ├── train.py
+│ │ └── test.py
+│ │
+│ ├── text_pipeline/
+│ │ ├── train.py
+│ │ └── test.py
+│ │
+│ └── fusion_pipeline/
+│ ├── train.py
+│ └── test.py
+│
+├── Results/
+│ ├── accuracy_tables.csv
+│ └── plots/
+│ ├── accuracy_comparison.png
+│ ├── tsne_speech.png
+│ ├── tsne_text.png
+│ └── tsne_fusion.png
+│
+├── Multimodal_Emotion_Recognition_Report.pdf
+├── README.md
+└── requirements.txt
+
+
 
 ---
 
 ## 🧠 Model Architectures
 
-### 🔹 1. Speech Pipeline
+###  1. Speech Pipeline
 
 **Preprocessing**
 - Resampled to 16kHz
@@ -51,7 +78,7 @@ project/ │ ├── models/ │ ├── speech_pipeline/ │ │ ├── 
 
 ---
 
-### 🔹 2. Text Pipeline
+###  2. Text Pipeline
 
 **Preprocessing**
 - Extracted word from filename
@@ -65,7 +92,7 @@ project/ │ ├── models/ │ ├── speech_pipeline/ │ │ ├── 
 
 ---
 
-### 🔹 3. Fusion Pipeline
+###  3. Fusion Pipeline
 
 - Speech embedding (**CNN** + BiLSTM)
 - Text embedding (**BERT**)
@@ -75,7 +102,7 @@ project/ │ ├── models/ │ ├── speech_pipeline/ │ │ ├── 
 
 ---
 
-## 📊 Experimental Results
+##  Experimental Results
 
 | Model        | Test Accuracy |
 |--------------|--------------|
@@ -85,25 +112,33 @@ project/ │ ├── models/ │ ├── speech_pipeline/ │ │ ├── 
 
 ---
 
-## 📈 Visualization
+##  Visualization
 
 ### 🔹 Model Comparison
 
+<img width="640" height="480" alt="accuracy_comparison" src="https://github.com/user-attachments/assets/57d6e9ac-45df-4c0d-a19c-dc5542ff0c76" />
 `accuracy_comparison.png`
+
 
 Speech > Fusion > Text
 
 ### 🔹 t-SNE Visualizations
 
-- `tsne_speech.png` → Clear emotional clustering  
-- `tsne_text.png` → Poor separation (text lacks emotion)  
+<img width="640" height="480" alt="tsne_speech" src="https://github.com/user-attachments/assets/b9458751-03cc-48ca-ba7a-1f3e651d2696" />
+
+- `tsne_speech.png` → Clear emotional clustering
+<img width="640" height="480" alt="tsne_text" src="https://github.com/user-attachments/assets/c8fd0912-dce7-47e4-b9d3-b7877ef54bb4" />
+
+- `tsne_text.png` → Poor separation (text lacks emotion)
+<img width="640" height="480" alt="tsne_fusion" src="https://github.com/user-attachments/assets/ed9f9e29-74bb-4e9b-bf7e-5f8ca551eaf6" />
+
 - `tsne_fusion.png` → Moderate clustering
 
 ---
 
-## 🔍 Analysis
+##  Analysis
 
-### ✅ Easiest Emotions
+###  Easiest Emotions
 
 - Happy
 - Disgust
@@ -111,18 +146,18 @@ Speech > Fusion > Text
 
 Strong acoustic variations make them easier to classify.
 
-### ❌ Hardest Emotions
+###  Hardest Emotions
 
 - Neutral
 - Fear
 
 Subtle acoustic differences lead to confusion.
 
-### 🔀 When Does Fusion Help?
+###  When Does Fusion Help?
 
 Fusion improves performance compared to text-only model. However, since **TESS** contains neutral spoken words, text adds limited emotional information, so fusion does not outperform speech-only model.
 
-### ⚠️ Error Analysis
+###  Error Analysis
 
 ## Fear misclassified as Angry due to similar high pitch.
 
@@ -130,7 +165,7 @@ Fusion improves performance compared to text-only model. However, since **TESS**
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 Clone repository:
 
@@ -142,23 +177,23 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
-### 🎤 Speech Model
+###  Speech Model
 
 cd models/speech_pipeline python train.py python test.py
 
-### 📝 Text Model
+###  Text Model
 
 cd models/text_pipeline python train.py python test.py
 
-### 🔀 Fusion Model
+###  Fusion Model
 
 cd models/fusion_pipeline python train.py python test.py
 
 ---
 
-## 📦 Dependencies
+##  Dependencies
 
 - torch
 - torchaudio
@@ -171,14 +206,6 @@ cd models/fusion_pipeline python train.py python test.py
 
 ---
 
-## 📄 Report
-
-The complete detailed report is available in:
-
-Multimodal_Emotion_Recognition_Report.pdf
-
----
-
 ## 🚀 Author
 
-**Bhavana Katta** Multimodal Emotion Recognition – Assignment 2
+**Katta Bhavana** Multimodal Emotion Recognition – Assignment 2
