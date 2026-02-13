@@ -1,0 +1,4 @@
+Model,Test Accuracy
+Speech-only,0.8607
+Text-only,0.1321
+Fusion,0.5750
