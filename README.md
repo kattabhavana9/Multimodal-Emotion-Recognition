@@ -29,30 +29,30 @@ And analyze:
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 project/
 │
 ├── models/
-│ ├── speech_pipeline/
-│ │ ├── train.py
-│ │ └── test.py
-│ │
-│ ├── text_pipeline/
-│ │ ├── train.py
-│ │ └── test.py
-│ │
-│ └── fusion_pipeline/
-│ ├── train.py
-│ └── test.py
+│   ├── speech_pipeline/
+│   │   ├── train.py
+│   │   └── test.py
+│   │
+│   ├── text_pipeline/
+│   │   ├── train.py
+│   │   └── test.py
+│   │
+│   └── fusion_pipeline/
+│       ├── train.py
+│       └── test.py
 │
 ├── Results/
-│ ├── accuracy_tables.csv
-│ └── plots/
-│ ├── accuracy_comparison.png
-│ ├── tsne_speech.png
-│ ├── tsne_text.png
-│ └── tsne_fusion.png
+│   ├── accuracy_tables.csv
+│   └── plots/
+│       ├── accuracy_comparison.png
+│       ├── tsne_speech.png
+│       ├── tsne_text.png
+│       └── tsne_fusion.png
 │
 ├── Multimodal_Emotion_Recognition_Report.pdf
 ├── README.md
